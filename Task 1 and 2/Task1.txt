@@ -1,0 +1,67 @@
+Task 1
+
+
+
+
+CREATE TABLE `formula_one`.`personal` (
+  `Name` VARCHAR(20) NOT NULL,
+  `Place` VARCHAR(20) NOT NULL,
+  `DOB` DATETIME NOT NULL);
+ALTER TABLE `formula_one`.`personal` 
+ADD PRIMARY KEY (`Name`);
+, RENAME TO  `formula_one`.`personal_info` ;
+
+
+INSERT INTO `formula_one`.`personal` (`Name`, `Place`, `DOB`) VALUES ('Hamilton', 'UK', '07/01/1985');
+INSERT INTO `formula_one`.`personal` (`Name`, `Place`, `DOB`) VALUES ('Bottas', 'Finland', '28/08/1989');
+INSERT INTO `formula_one`.`personal` (`Name`, `Place`, `DOB`) VALUES ('Verstappen', 'Holland', '30/09/1997');
+INSERT INTO `formula_one`.`personal` (`Name`, `Place`, `DOB`) VALUES ('Perez', 'Mexico', '26/01/1990');
+INSERT INTO `formula_one`.`personal` (`Name`, `Place`, `DOB`) VALUES ('Leclerk', 'Italy', '16/10/1997');
+INSERT INTO `formula_one`.`personal` (`Name`, `Place`, `DOB`) VALUES ('Vettel', 'Germany', '13/07/1987');
+
+
+CREATE TABLE `formula_one`.`car_details` (
+  `No:` INT NOT NULL,
+  `Name` VARCHAR(45) NULL,
+  `Team` VARCHAR(45) NULL,
+  PRIMARY KEY (`No:`));
+
+
+INSERT INTO `formula_one`.`car_details` (`No:`, `Name`, `Team`) VALUES ('44', 'Hamilton', 'Merc');
+INSERT INTO `formula_one`.`car_details` (`No:`, `Name`, `Team`) VALUES ('77', 'Bottas', 'Merc');
+INSERT INTO `formula_one`.`car_details` (`No:`, `Name`, `Team`) VALUES ('33', 'Verstapen', 'Red bull');
+INSERT INTO `formula_one`.`car_details` (`No:`, `Name`, `Team`) VALUES ('11', 'Perez', 'Red bull');
+INSERT INTO `formula_one`.`car_details` (`No:`, `Name`, `Team`) VALUES ('16', 'Leclerk', 'Ferrari');
+INSERT INTO `formula_one`.`car_details` (`No:`, `Name`, `Team`) VALUES ('5', 'Vettel', 'Ferrari');
+
+
+CREATE TABLE `formula_one`.`points` (
+  `Name` VARCHAR(20) NOT NULL,
+  `points 2018` INT NULL,
+  `points 2019` INT NULL,
+  `points 2020` INT NULL,
+  PRIMARY KEY (`Name`));
+
+
+INSERT INTO `formula_one`.`points` (`Name`, `points 2018`, `points 2019`, `points 2020`) VALUES ('Hamilton', '408', '413', '347');
+INSERT INTO `formula_one`.`points` (`Name`, `points 2018`, `points 2019`, `points 2020`) VALUES ('Bottas', '247', '326', '223');
+INSERT INTO `formula_one`.`points` (`Name`, `points 2018`, `points 2019`, `points 2020`) VALUES ('Verstapen', '249', '278', '214');
+INSERT INTO `formula_one`.`points` (`Name`, `points 2018`, `points 2019`, `points 2020`) VALUES ('Perez', '62', '52', '125');
+INSERT INTO `formula_one`.`points` (`Name`, `points 2018`, `points 2019`, `points 2020`) VALUES ('Vettel', '320', '240', '33');
+INSERT INTO `formula_one`.`points` (`Name`, `points 2018`, `points 2019`, `points 2020`) VALUES ('Leclerk', '39', '264', '98');
+
+
+
+CREATE TABLE `formula_one`.`poles and podiums` (
+  `Name` VARCHAR(20) NOT NULL,
+  `Poles` INT NULL,
+  `Podiums` INT NULL,
+  PRIMARY KEY (`Name`));
+
+
+INSERT INTO `formula_one`.`poles and podiums` (`Name`, `Poles`, `Podiums`) VALUES ('Hamilton', '100', '169');
+INSERT INTO `formula_one`.`poles and podiums` (`Name`, `Poles`, `Podiums`) VALUES ('Bottas', '17', '59');
+INSERT INTO `formula_one`.`poles and podiums` (`Name`, `Poles`, `Podiums`) VALUES ('Verstapen', '4', '46');
+INSERT INTO `formula_one`.`poles and podiums` (`Name`, `Poles`, `Podiums`) VALUES ('Perez', '0', '10');
+INSERT INTO `formula_one`.`poles and podiums` (`Name`, `Poles`, `Podiums`) VALUES ('Vettel', '57', '121');
+INSERT INTO `formula_one`.`poles and podiums` (`Name`, `Poles`, `Podiums`) VALUES ('Leclerk', '7', '12');
